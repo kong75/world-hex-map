@@ -8,6 +8,8 @@
 .vscode/
 build/
 coverage/
+dist/
 doc/api/
+node_modules/
 pubspec.lock
 *.iml

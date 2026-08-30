@@ -7,4 +7,5 @@ Describe the change and why it is needed.
 - [ ] `dart format --output=none --set-exit-if-changed .`
 - [ ] `flutter analyze`
 - [ ] `flutter test`
+- [ ] `npm run check`
 - [ ] Generated data updated when generator behavior changed

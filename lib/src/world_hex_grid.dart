@@ -2,7 +2,7 @@ import 'world_hex_grid_data.dart';
 
 /// A point in the map's normalized coordinate space.
 ///
-/// Both [x] and [y] range from 0 to 1, with `(0, 0)` at the top-left.
+/// Both `x` and `y` range from 0 to 1, with `(0, 0)` at the top-left.
 typedef NormalizedMapPoint = ({double x, double y});
 
 /// A geographic point expressed in decimal degrees.
@@ -96,11 +96,9 @@ abstract final class WorldHexGrid {
     for (var row = estimatedRow - 3; row <= estimatedRow + 3; row++) {
       if (row < 0 || row >= rows) continue;
       final estimatedColumn = (targetColumn - (row.isOdd ? 0.5 : 0.0)).round();
-      for (
-        var column = estimatedColumn - 3;
-        column <= estimatedColumn + 3;
-        column++
-      ) {
+      for (var column = estimatedColumn - 3;
+          column <= estimatedColumn + 3;
+          column++) {
         if (column < 0 || column >= columns) continue;
         final candidate = cellId(row: row, column: column);
         if (!isLandCell(candidate)) continue;

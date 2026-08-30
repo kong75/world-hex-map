@@ -21,13 +21,14 @@ body:
     id: version
     attributes:
       label: Package version
-      placeholder: 0.1.0
+      placeholder: 0.2.0
     validations:
       required: true
   - type: input
-    id: flutter
+    id: environment
     attributes:
-      label: Flutter version
-      placeholder: Output of flutter --version
+      label: Environment
+      description: Include the relevant Flutter, Node.js, browser, and framework versions.
+      placeholder: Flutter 3.x or Node.js 20 / Chrome 130
     validations:
       required: true

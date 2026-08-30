@@ -1,0 +1,60 @@
+{
+  "name": "world-hex-map",
+  "version": "0.2.0",
+  "description": "A lightweight, offline world hex map for TypeScript and the web.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kong75/world-hex-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kong75/world-hex-map/issues"
+  },
+  "homepage": "https://github.com/kong75/world-hex-map#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "typescript/src",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "doc/assets/world_hex_map_preview.png",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "build:example": "tsc --project examples/typescript/tsconfig.json",
+    "check": "npm run build && npm run build:example && npm test",
+    "example:typescript": "npm run build && npm run build:example && node build/typescript-example/render-map.js",
+    "generate": "node tool/generate_world_hex_grid.mjs",
+    "test": "node --test test-typescript/*.test.mjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run check"
+  },
+  "keywords": [
+    "map",
+    "hex-grid",
+    "geospatial",
+    "svg",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "typescript": "^5.9.2"
+  }
+}

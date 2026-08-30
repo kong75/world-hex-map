@@ -9,7 +9,7 @@ void main() {
       WorldHexGrid.landCellIds.length,
     );
 
-    final maximumCellId = WorldHexGrid.columns * WorldHexGrid.rows;
+    const maximumCellId = WorldHexGrid.columns * WorldHexGrid.rows;
     for (final cellId in WorldHexGrid.landCellIds) {
       expect(cellId, inInclusiveRange(0, maximumCellId - 1));
       final center = WorldHexGrid.normalizedCenter(cellId);

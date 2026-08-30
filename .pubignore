@@ -1,0 +1,15 @@
+.dart_tool/
+.github/
+.gitignore
+.gitattributes
+.pubignore
+build/
+dist/
+doc/api/
+examples/
+node_modules/
+package-lock.json
+package.json
+test-typescript/
+tsconfig.json
+typescript/
